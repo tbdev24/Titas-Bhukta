@@ -62,7 +62,7 @@
 }
 
 @media (max-width: 768px) {
-    .collection-product-grid .row 
+    .collection-product-grid .row {
     margin-left: -5px;
     margin-right: -5px;
 }
