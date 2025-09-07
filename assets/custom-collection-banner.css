@@ -74,6 +74,10 @@
   .collection-banner .banner-header .logo {
     width: 150px;
   }
+  .collection-banner .banner-header p {
+    color: #000000;
+    letter-spacing: 0;
+  }
   .collection-banner .banner-content {
     background: rgb(218, 218, 218);
   }
