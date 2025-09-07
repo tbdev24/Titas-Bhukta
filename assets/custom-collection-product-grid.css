@@ -44,3 +44,11 @@
     left: calc(50% - 12.5px);
     top: 0;
 }
+.collection-product-grid .row .col-4.top-left .quick-view-trigger img {
+    left: 0;
+    top: 0;
+}
+.collection-product-grid .row .col-4.top-right .quick-view-trigger img {
+    right: 0;
+    top: 0;
+}
