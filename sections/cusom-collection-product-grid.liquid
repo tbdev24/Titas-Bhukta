@@ -1,14 +1,16 @@
 <div class="collection-product-grid">
-  <div class="row">
-    {% for block in section.blocks %}
-      {% assign product = all_products[block.settings.product] %}
-      {% if product %}
-        <div class="col-4 {{ block.settings.quick_view_position }}">
-            <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" width="375px" height="395px">
-            <div class="quick-view-trigger" data-product-handle="{{ product.handle }}">+</div>
-        </div>
-      {% endif %}
-    {% endfor %}
+  <div class="container">
+    <div class="row">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="col-4 {{ block.settings.quick_view_position }}">
+              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" width="375px" height="395px">
+              <div class="quick-view-trigger" data-product-handle="{{ product.handle }}">+</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
