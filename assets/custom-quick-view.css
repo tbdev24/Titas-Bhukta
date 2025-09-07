@@ -120,6 +120,7 @@
     width: 100%;
     margin-top: 50px;
     margin-bottom: 2px;
+    cursor: pointer;
 }
 .quick-view #quick-view-add-to-cart img {
     width: 20px;
@@ -145,6 +146,7 @@
     border: 1px solid #000000;
     padding: 5px 15px;
     color: #000000;
+    cursor: pointer;
 }
 .quick-view .color-options label.checked {
     background: #000000;
