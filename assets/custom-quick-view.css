@@ -198,6 +198,7 @@
     font-size: 15px;
     padding: 2px;
     color: #000000;
+    cursor: pointer;
 }
 .quick-view .size-options label:hover {
     background: #000;
