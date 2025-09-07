@@ -38,3 +38,9 @@
     width: 25px;
     height: 25px;
 }
+
+/*Toggler Positions*/
+.collection-product-grid .row .col-4.top-center .quick-view-trigger img {
+    left: calc(50% - 12.5px);
+    top: 0;
+}
