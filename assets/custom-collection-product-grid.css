@@ -26,3 +26,13 @@
     object-fit: cover;
     object-position: center center; 
 }
+.collection-product-grid .row .col-4 .quick-view-trigger {
+    background: #F8F8F8E5;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 7px 0;
+    width: 25px;
+    height: 25px;
+}
