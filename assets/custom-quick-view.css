@@ -40,9 +40,9 @@
     width: 100%;
 }
 .quick-view .row .col-5 {
-    -ms-flex: 0 0 calc(48% - 15px);
-    flex: 0 0 calc(48% - 15px);
-    max-width: calc(48% - 15px);
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+    max-width: 48%;
     padding-right: 15px;
 }
 .quick-view .row .col-7 {
