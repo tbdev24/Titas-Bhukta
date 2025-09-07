@@ -337,6 +337,7 @@
               const closeBtn = document.getElementById("quick-view-close");
               const addToCartBtn = document.getElementById("quick-view-add-to-cart")
               const sizeSelectorHeader = document.getElementById("size-selector-header");
+              const handle = this.dataset.productHandle;
 
               //Open
               document.querySelectorAll(".quick-view-trigger").forEach((btn) => {
@@ -344,7 +345,7 @@
                       popup.classList.remove("popup-hidden");
 
                       //Fetch Content
-                      fetch(`/products/blue-silk-tuxedo.js`)
+                      fetch(`/products/${handle}.js`)
                       .then(res => res.json())
                       .then(product => {
                           // Fill content
