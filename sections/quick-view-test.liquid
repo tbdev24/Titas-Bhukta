@@ -343,20 +343,20 @@
                     }
 
                     //Size Options
-                    const colorContainer = document.getElementById("color-options-fill");
-                    colorContainer.innerHTML = "";
+                    const sizeContainer = document.getElementById("size-options-fill");
+                    sizeContainer.innerHTML = "";
 
-                    let colorOption = product.options.find(opt => opt.name.toLowerCase() === "color");
-                    if(colorOption) {
-                        colorOption.values.forEach(val => {
+                    let sizeOption = product.options.find(opt => opt.name.toLowerCase() === "size");
+                    if(sizeOption) {
+                        sizeOption.values.forEach(val => {
                             let label = document.createElement("label");
                             let radio = document.createElement("input");
                             radio.type = "radio";
-                            radio.name = "color";
+                            radio.name = "size";
                             radio.value = val;
                             label.appendChild(radio);
                             label.appendChild(document.createTextNode(val));
-                            colorContainer.appendChild(label);
+                            sizeContainer.appendChild(label);
                         });
                     }
                 });
