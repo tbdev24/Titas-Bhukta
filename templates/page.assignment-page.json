@@ -62,7 +62,7 @@
           "type": "product",
           "settings": {
             "product": "classic-leather-jacket",
-            "quick_view_position": "top-right"
+            "quick_view_position": "top-right-edge"
           }
         },
         "product_bPiW34": {
