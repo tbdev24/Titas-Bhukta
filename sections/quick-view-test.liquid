@@ -320,7 +320,7 @@
                 .then(product => {
                     // Fill content
                     document.getElementById("quick-view-title").innerText = product.title;
-                    document.getElementById("quick-view-price").innerText = {{ product.price | money }};
+                    document.getElementById("quick-view-price").innerText = (product.price / 100).toFixed(2) + ' ' + Shopify.currency.active;
                     document.getElementById("quick-view-desc").innerHTML = product.description;
                     document.getElementById("quick-view-image").src = product.featured_image;
 
