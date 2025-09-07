@@ -62,6 +62,10 @@
 }
 
 @media (max-width: 768px) {
+    .collection-product-grid .row 
+    margin-left: -5px;
+    margin-right: -5px;
+}
     .collection-product-grid .row .col-4 {
         -ms-flex: 0 0 calc(50% - 10px);
     flex: 0 0 calc(50% - 10px);
