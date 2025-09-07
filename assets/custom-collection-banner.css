@@ -92,10 +92,10 @@
     padding-bottom: 30px;
   }
   .collection-banner .banner-content .wrapper {
-    max-width: 475px;
+    max-width: 425px;
     margin-left: 0;
     background: #ffffff;
-    padding: 30px 40px;
+    padding: 10px 20px 30px;
   }
   .collection-banner .banner-content h1 {
     font-size: 60px;
