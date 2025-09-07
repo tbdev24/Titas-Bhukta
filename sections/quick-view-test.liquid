@@ -301,15 +301,17 @@
 </div>
 
 <script>
-(function() {
-  const popup = document.getElementById('quick-view-popup');
-  const closeBtn = popup.querySelector('.quick-view-close');
-  const addToCartBtn = document.getElementById('qv-add-to-cart');
+    (function () {
+        const popup = document.getElementById("quick-view-popup");
+        const closeBtn = document.getElementById("quick-view-close");
 
-  // Open Quick View
-  document.querySelectorAll('.quick-view-trigger').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const handle = this.dataset.productHandle;
+        //Open
+        document.querySelectorAll(".quick-view-trigger").forEach((btn) => {
+            btn.addEventListener("click", function () {
+                popup.classList.remove("popup-hidden");
+
+                //Fetch Content
+                const handle = this.dataset.productHandle;
 
       fetch(`/products/blue-silk-tuxedo.js`)
         .then(res => res.json())
@@ -372,52 +374,21 @@
               sizeContainer.appendChild(label);
             });
           }
-
-
-          // Show popup
-          popup.classList.remove('hidden');
-
-          // Handle Add to Cart
-          addToCartBtn.onclick = function() {
-            let selectedColor = document.querySelector('input[name="color"]:checked')?.value;
-            let selectedSize = document.querySelector('input[name="size"]:checked')?.value;
-
-            let variant = product.variants.find(v => {
-              return (!selectedColor || v.options.includes(selectedColor)) &&
-                     (!selectedSize || v.options.includes(selectedSize));
             });
-
-            if (!variant) {
-              alert("Please select options");
-              return;
-            }
-
-            fetch('/cart/add.js', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ id: variant.id, quantity: 1 })
-            })
-            .then(() => {
-              alert('Added to cart!');
-              popup.classList.add('hidden');
-            });
-          };
         });
-    });
-  });
 
-  // Close popup
-  closeBtn.addEventListener('click', () => {
-    popup.classList.add('hidden');
-  });
+        //Close
+        closeBtn.addEventListener("click", () => {
+            popup.classList.add("popup-hidden");
+        });
 
-  // Close on outside click
-  window.addEventListener('click', (e) => {
-    if (e.target === popup) {
-      popup.classList.add('hidden');
-    }
-  });
-})();
+        //Close on outside click
+        window.addEventListener("click", (e) => {
+            if (e.target === popup) {
+                popup.classList.add("popup-hidden");
+            }
+        });
+    })();
 </script>
 
 {% schema %}
