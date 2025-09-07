@@ -62,7 +62,9 @@
 }
 
 @media (max-width: 768px) {
- 
+ .collection-product-grid h2 {
+    text-align: center;
+}
     .collection-product-grid .row .col-4 {
         -ms-flex: 0 0 calc(50% - 4px);
     flex: 0 0 calc(50% - 4px);
