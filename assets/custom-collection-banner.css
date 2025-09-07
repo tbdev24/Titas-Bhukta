@@ -93,10 +93,12 @@
     font-size: 60px;
     font-weight: 600;
     margin-bottom: 20px;
+    letter-spacing: 0;
   }
   .collection-banner .banner-content p {
     margin-bottom: 40px;
     color: #000000;
+    letter-spacing: 0;
   }
   .collection-banner .banner-feature {
     padding: 10px 0;
@@ -106,4 +108,5 @@
   .collection-banner .banner-feature p {
     margin: 0;
     color: #000000;
+    letter-spacing: 0;
   }
