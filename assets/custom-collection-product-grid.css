@@ -63,6 +63,8 @@
 
 @media (max-width: 768px) {
  .collection-product-grid h2 {
+        margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
     .collection-product-grid .row .col-4 {
