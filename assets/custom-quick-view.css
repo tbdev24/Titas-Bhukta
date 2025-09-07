@@ -75,17 +75,13 @@
     color: #000000;
     letter-spacing: 0;
 }
-.quick-view .colors-container h4 {
-    font-weight: 400;
-    font-size: 14px;
-    color: #333333;
-    margin-bottom: 2px;
-}
+.quick-view .colors-container h4,
 .quick-view .sizes-container h4 {
     font-weight: 400;
     font-size: 14px;
     color: #333333;
-    margin-bottom: 2px;
+    margin-top: 0;
+    margin-bottom: 4px;
 }
 .quick-view .sizes-container #size-selector-header {
     border: 1px solid #000;
