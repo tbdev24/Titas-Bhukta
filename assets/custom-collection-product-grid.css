@@ -41,16 +41,16 @@
 
 /*Toggler Positions*/
 .collection-product-grid .row .col-4.top-center .quick-view-trigger img {
-    top: 65px;
-    left: calc(50% + 30px);
+    top: 95px;
+    left: calc(50% + 5px);
 }
 .collection-product-grid .row .col-4.top-left .quick-view-trigger img {
     top: 0;
     left: 0;
 }
 .collection-product-grid .row .col-4.top-right .quick-view-trigger img {
-    top: 0;
-    right: 0;
+    top: 65px;
+    left: calc(50% + 30px);
 }
 
 .collection-product-grid .row .col-4.center-center .quick-view-trigger img {
