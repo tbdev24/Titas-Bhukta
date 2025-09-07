@@ -240,7 +240,7 @@
         <h2>Tisso vison in the wild</h2>
         <div class="row">
             <div class="col-4">
-                <img src="images/image 822.png" alt="" class="featured-image" />
+                <img src="{{ '/man-adjusts-blue-tuxedo-bowtie_925x_55a49e12-d54b-488e-b7a0-ea4c201eb01f.jpg' | file_url }}" alt="" class="featured-image" width="" height="">
                 <div class="quick-view-trigger">+</div>
             </div>
             <div class="col-4">
@@ -314,8 +314,8 @@
                 fetch(`/products/blue-silk-tuxedo.js`)
                 .then(res => res.json())
                 .then(product => {
-                // Fill content
-                document.getElementById('quick-view-title').innerText = product.title;
+                    // Fill content
+                    document.getElementById('quick-view-title').innerText = product.title;
                 });
             });
         });
