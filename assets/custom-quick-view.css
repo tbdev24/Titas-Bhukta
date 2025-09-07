@@ -72,7 +72,7 @@
     font-weight: 300;
     font-size: 12px;
     color: #000000;
-    letter-spacing: -1%;
+    letter-spacing: 0;
 }
 .quick-view .colors-container h4 {
     font-weight: 400;
