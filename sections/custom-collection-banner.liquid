@@ -1,3 +1,48 @@
+<div class="collection-banner">
+  <!-- Header -->
+  <div class="banner-header">
+    <div class="container">
+      {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | image_url }}" alt="logo" class="logo" width="140" height="auto" />
+      {% endif %}
+      <p>{{ section.settings.header_text }}</p>
+      {% if section.settings.header_button_text != blank %}
+        <a href="{{ section.settings.header_button_link }}" class="btn-yellow">
+          {{ section.settings.header_button_text }}
+          {% if section.settings.header_button_icon %}
+            <img src="{{ section.settings.header_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
+          {% endif %}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Banner Content -->
+  <div class="banner-content" style="background-image: url('{{ section.settings.banner_background | image_url }}');">
+    <div class="container">
+      <div class="wrapper">
+        <h1>{{ section.settings.banner_heading }}</h1>
+        <p>{{ section.settings.banner_text }}</p>
+        {% if section.settings.banner_button_text != blank %}
+          <a href="{{ section.settings.banner_button_link }}" class="btn-dark">
+            {{ section.settings.banner_button_text }}
+            {% if section.settings.banner_button_icon %}
+              <img src="{{ section.settings.banner_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature -->
+  <div class="banner-feature">
+    <div class="container">
+      <p>{{ section.settings.feature_text }}</p>
+    </div>
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Custom Collection Banner",
@@ -76,48 +121,3 @@
   ]
 }
 {% endschema %}
-
-<div class="collection-banner">
-  <!-- Header -->
-  <div class="banner-header">
-    <div class="container">
-      {% if section.settings.logo %}
-        <img src="{{ section.settings.logo | image_url }}" alt="logo" class="logo" width="140" height="auto" />
-      {% endif %}
-      <p>{{ section.settings.header_text }}</p>
-      {% if section.settings.header_button_text != blank %}
-        <a href="{{ section.settings.header_button_link }}" class="btn-yellow">
-          {{ section.settings.header_button_text }}
-          {% if section.settings.header_button_icon %}
-            <img src="{{ section.settings.header_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
-          {% endif %}
-        </a>
-      {% endif %}
-    </div>
-  </div>
-
-  <!-- Banner Content -->
-  <div class="banner-content" style="background-image: url('{{ section.settings.banner_background | image_url }}');">
-    <div class="container">
-      <div class="wrapper">
-        <h1>{{ section.settings.banner_heading }}</h1>
-        <p>{{ section.settings.banner_text }}</p>
-        {% if section.settings.banner_button_text != blank %}
-          <a href="{{ section.settings.banner_button_link }}" class="btn-dark">
-            {{ section.settings.banner_button_text }}
-            {% if section.settings.banner_button_icon %}
-              <img src="{{ section.settings.banner_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
-            {% endif %}
-          </a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-
-  <!-- Feature -->
-  <div class="banner-feature">
-    <div class="container">
-      <p>{{ section.settings.feature_text }}</p>
-    </div>
-  </div>
-</div>
