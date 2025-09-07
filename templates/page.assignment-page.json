@@ -41,14 +41,14 @@
           "type": "product",
           "settings": {
             "product": "black-leather-bag",
-            "quick_view_position": "top-right"
+            "quick_view_position": "center-center"
           }
         },
         "product_tAY4Ef": {
           "type": "product",
           "settings": {
             "product": "blue-silk-tuxedo",
-            "quick_view_position": "top-right"
+            "quick_view_position": "center-right"
           }
         },
         "product_WKCQKj": {
