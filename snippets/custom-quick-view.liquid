@@ -330,7 +330,29 @@
                     }
 
                     //Add to Cart
+                    addToCartBtn.onclick = function() {
+                        let selectedColor = document.querySelector("input[name="color"]:checked")?.value;
+                        let selectedSize = document.querySelector("input[name="size"]:checked")?.value;
 
+                        let variant = product.variants.find(v => {
+                            return (!selectedColor || v.options.includes(selectedColor)) && (!selectedSize || v.options.includes(selectedSize));
+                        });
+
+                        if(!variant) {
+                            alert("Please select options");
+                            return;
+                        }
+
+                        fetch("/cart/add.js", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ id: variant.id, quantity: 1 })
+                        })
+                        .then(() => {
+                            alert("Added to Cart");
+                            popup.classList.add("popup-hidden");
+                        });
+                    };
                 });
             });
         });
