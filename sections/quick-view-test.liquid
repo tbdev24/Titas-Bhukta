@@ -339,6 +339,18 @@
                             label.appendChild(radio);
                             label.appendChild(document.createTextNode(val));
                             colorContainer.appendChild(label);
+                            let colorhex = document.createElement("div");
+                            if(val === "Black") {
+                                colorhex.style.backgroundColor = "#000000";
+                            } else if(val === "White") {
+                                colorhex.style.backgroundColor = "#000000";
+                            } else if(val === "Red") {
+                                colorhex.style.backgroundColor = "#B20F36";
+                            } else if(val === "Blue") {
+                                colorhex.style.backgroundColor = "#000000";
+                            } else {
+                                colorhex.style.backgroundColor = "#AFAFB7";
+                            }
                         });
                     }
 
