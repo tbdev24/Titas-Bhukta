@@ -26,6 +26,7 @@
         "header_button_text": "Choose Gift",
         "header_button_link": "/",
         "header_button_icon": "shopify://shop_images/right-icon.svg",
+        "banner_background": "shopify://shop_images/background.webp",
         "banner_heading": "The Gift Guide",
         "banner_text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
         "banner_button_text": "Shop Now",
