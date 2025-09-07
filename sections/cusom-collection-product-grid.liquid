@@ -1,31 +1,83 @@
 <div class="collection-product-grid">
-            <div class="container">
-                <h2>Tisso vison in the wild</h2>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="images/image 822.png" alt="" class="featured-image" />
-                        <div class="quick-view-trigger"><img src="images/plus-icon.svg" alt="" /></div>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/image 822.png" alt="" class="featured-image" />
-                        <div class="quick-view-trigger"></div>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/image 822.png" alt="" class="featured-image" />
-                        <div class="quick-view-trigger"></div>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/image 822.png" alt="" class="featured-image" />
-                        <div class="quickview-open"></div>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/image 822.png" alt="" class="featured-image" />
-                        <div class="quickview-open"></div>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/image 822.png" alt="" class="featured-image" />
-                        <div class="quickview-open"></div>
-                    </div>
-                </div>
-            </div>
+  <div class="row">
+    {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      {% if product %}
+        <div class="col-4 {{ block.settings.quick_view_position }}">
+            <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" width="375px" height="395px">
+            <div class="quick-view-trigger" data-product-handle="{{ product.handle }}">+</div>
         </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% render 'custom-quick-view' %}
+
+<style>
+/*Collection Product Grid*/
+.collection-product-grid {
+    padding: 40px 0;
+}
+.collection-product-grid h2 {
+    margin-bottom: 25px;
+    font-family: "Lustria" !important;
+    font-weight: 300;
+}
+.collection-product-grid .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.collection-product-grid .row .col-4 {
+    -ms-flex: 0 0 calc(33.333333% - 15px);
+    flex: 0 0 calc(33.333333% - 15px);
+    max-width: calc(33.333333% - 15px);
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.collection-product-grid .row .col-4 img {
+    width: 100%;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Custom Collection Grid",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose product"
+        },
+        {
+          "type": "select",
+          "id": "quick_view_position",
+          "label": "Quick View Toggler Position",
+          "default": "top-right",
+          "options": [
+            { "value": "center-top", "label": "Center Top" },
+            { "value": "top-left", "label": "Top Left" },
+            { "value": "top-right", "label": "Top Right" },
+            { "value": "bottom-left", "label": "Bottom Left" },
+            { "value": "bottom-right", "label": "Bottom Right" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Grid",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}
