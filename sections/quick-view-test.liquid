@@ -336,9 +336,6 @@
                             radio.type = "radio";
                             radio.name = "color";
                             radio.value = val;
-                            label.appendChild(radio);
-                            label.appendChild(document.createTextNode(val));
-                            colorContainer.appendChild(label);
                             let colorhex = document.createElement("div");
                             if(val === "Black") {
                                 colorhex.style.backgroundColor = "#000000";
@@ -351,6 +348,10 @@
                             } else {
                                 colorhex.style.backgroundColor = "#AFAFB7";
                             }
+                            label.appendChild(colorhex);
+                            label.appendChild(radio);
+                            label.appendChild(document.createTextNode(val));
+                            colorContainer.appendChild(label);
                         });
                     }
 
