@@ -1,0 +1,208 @@
+{% schema %}
+{
+  "name": "Custom Collection Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "header_button_text",
+      "label": "Header Button Text",
+      "default": "Choose Gift"
+    },
+    {
+      "type": "url",
+      "id": "header_button_link",
+      "label": "Header Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_button_icon",
+      "label": "Header Button Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_background",
+      "label": "Banner Background Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Banner Heading",
+      "default": "The Gift Guide"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_text",
+      "label": "Banner Description",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "text",
+      "id": "banner_button_text",
+      "label": "Banner Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "banner_button_link",
+      "label": "Banner Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_button_icon",
+      "label": "Banner Button Icon"
+    },
+    {
+      "type": "text",
+      "id": "feature_text",
+      "label": "Feature Text",
+      "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Banner"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="collection-banner">
+  <!-- Header -->
+  <div class="banner-header">
+    <div class="container">
+      {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | image_url }}" alt="logo" class="logo" width="140" height="auto" />
+      {% endif %}
+      <p>{{ section.settings.header_text }}</p>
+      {% if section.settings.header_button_text != blank %}
+        <a href="{{ section.settings.header_button_link }}" class="btn-yellow">
+          {{ section.settings.header_button_text }}
+          {% if section.settings.header_button_icon %}
+            <img src="{{ section.settings.header_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
+          {% endif %}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Banner Content -->
+  <div class="banner-content" style="background-image: url('{{ section.settings.banner_background | image_url }}');">
+    <div class="container">
+      <div class="wrapper">
+        <h1>{{ section.settings.banner_heading }}</h1>
+        <p>{{ section.settings.banner_text }}</p>
+        {% if section.settings.banner_button_text != blank %}
+          <a href="{{ section.settings.banner_button_link }}" class="btn-dark">
+            {{ section.settings.banner_button_text }}
+            {% if section.settings.banner_button_icon %}
+              <img src="{{ section.settings.banner_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature -->
+  <div class="banner-feature">
+    <div class="container">
+      <p>{{ section.settings.feature_text }}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  .btn-yellow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #fff544;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .btn-yellow img {
+    width: 25px;
+    margin-left: 20px;
+  }
+  .btn-dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #000000;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: max-content;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .btn-dark img {
+    width: 25px;
+    margin-left: 20px;
+    filter: invert(1);
+  }
+  .collection-banner {
+    font-family: "Jost" !important;
+  }
+  .collection-banner .banner-header {
+    padding: 15px 0;
+    background: #f5f5f5;
+  }
+  .collection-banner .banner-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .collection-banner .banner-header .logo {
+    width: 140px;
+  }
+  .collection-banner .banner-content {
+    background: rgb(218, 218, 218);
+  }
+  .collection-banner .banner-content .container {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 30px;
+  }
+  .collection-banner .banner-content .wrapper {
+    max-width: 450px;
+    margin-left: 0;
+    background: #ffffff;
+    padding: 30px 40px;
+  }
+  .collection-banner .banner-content h1 {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .collection-banner .banner-content p {
+    margin-bottom: 40px;
+  }
+  .collection-banner .banner-feature {
+    padding: 10px 0;
+    background: #f5f5f5;
+    text-align: center;
+  }
+</style>
