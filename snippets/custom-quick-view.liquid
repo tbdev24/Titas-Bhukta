@@ -331,8 +331,8 @@
 
                     //Add to Cart
                     addToCartBtn.onclick = function() {
-                        let selectedColor = document.querySelector("input[name="color"]:checked")?.value;
-                        let selectedSize = document.querySelector("input[name="size"]:checked")?.value;
+                        let selectedColor = document.querySelector('input[name="color"]:checked')?.value;
+                        let selectedSize = document.querySelector('input[name="size"]:checked')?.value;
 
                         let variant = product.variants.find(v => {
                             return (!selectedColor || v.options.includes(selectedColor)) && (!selectedSize || v.options.includes(selectedSize));
