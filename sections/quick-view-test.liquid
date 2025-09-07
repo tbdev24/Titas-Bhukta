@@ -305,92 +305,13 @@
                 .then(product => {
                 // Fill content
                 document.getElementById('quick-view-title').innerText = product.title;
-                document.getElementById('qv-product-price').innerText = 
-                    (product.price / 100).toFixed(2) + ' ' + Shopify.currency.active;
-                document.getElementById('qv-product-description').innerText = product.description;
-                document.getElementById('qv-product-image').src = product.featured_image;
-
-                // Colors
-                const colorContainer = document.getElementById('qv-color');
-                colorContainer.innerHTML = ''; // clear
-
-                let colorOption = product.options.find(opt => opt.name.toLowerCase() === 'color');
-                if (colorOption) {
-                    colorOption.values.forEach(val => {
-                    let label = document.createElement('label');
-                    let radio = document.createElement('input');
-                    radio.type = 'radio';
-                    radio.name = 'color';
-                    radio.value = val;
-                    let colorhex = document.createElement('div');
-                    if (val === "Blue") {
-                        colorhex.style.backgroundColor = "#0D499F";
-                    } else if (val === "White") {
-                        colorhex.style.backgroundColor = "#ffffff";
-                    } else if (val === "Black") {
-                        colorhex.style.backgroundColor = "#000000";
-                    } else if (val === "Red") {
-                        colorhex.style.backgroundColor = "#FF0000";
-                    } else {
-                        colorhex.style.backgroundColor = "#cccccc"; // default
-                    }
-                    label.appendChild(colorhex);
-                    label.appendChild(radio);
-                    label.appendChild(document.createTextNode(val));
-                    colorContainer.appendChild(label);
-                    });
-                }
-
                 
-
-
-                // Sizes
-                const sizeContainer = document.getElementById('qv-size');
-                sizeContainer.innerHTML = ''; // clear
-
-                let sizeOption = product.options.find(opt => opt.name.toLowerCase() === 'size');
-                if (sizeOption) {
-                    sizeOption.values.forEach(val => {
-                    let label = document.createElement('label');
-                    let radio = document.createElement('input');
-                    radio.type = 'radio';
-                    radio.name = 'size';
-                    radio.value = val;
-                    label.appendChild(radio);
-                    label.appendChild(document.createTextNode(val));
-                    sizeContainer.appendChild(label);
-                    });
-                }
 
 
                 // Show popup
                 popup.classList.remove('hidden');
 
-                // Handle Add to Cart
-                addToCartBtn.onclick = function() {
-                    let selectedColor = document.querySelector('input[name="color"]:checked')?.value;
-                    let selectedSize = document.querySelector('input[name="size"]:checked')?.value;
-
-                    let variant = product.variants.find(v => {
-                    return (!selectedColor || v.options.includes(selectedColor)) &&
-                            (!selectedSize || v.options.includes(selectedSize));
-                    });
-
-                    if (!variant) {
-                    alert("Please select options");
-                    return;
-                    }
-
-                    fetch('/cart/add.js', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id: variant.id, quantity: 1 })
-                    })
-                    .then(() => {
-                    alert('Added to cart!');
-                    popup.classList.add('hidden');
-                    });
-                };
+                
                 });
             });
         });
