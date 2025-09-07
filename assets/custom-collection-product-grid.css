@@ -62,17 +62,14 @@
 }
 
 @media (max-width: 768px) {
-    .collection-product-grid .row {
-    margin-left: -5px;
-    margin-right: -5px;
-}
+ 
     .collection-product-grid .row .col-4 {
         -ms-flex: 0 0 calc(50% - 4px);
     flex: 0 0 calc(50% - 4px);
     max-width: calc(50% - 4px);
     margin-right: 2px;
     margin-left: 2px;
-    margin-bottom: 0;
+    margin-bottom: -4px;
     }
     .collection-product-grid .row .col-4 img.featured-image {
     height: 200px;
