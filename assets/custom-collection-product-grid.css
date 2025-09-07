@@ -27,7 +27,7 @@
     object-fit: cover;
     object-position: center center; 
 }
-.collection-product-grid .row .col-4 .quick-view-trigger {
+.collection-product-grid .row .col-4 .quick-view-trigger img {
     background: #F8F8F8E5;
     position: absolute;
     z-index: 100;
