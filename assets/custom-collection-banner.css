@@ -16,6 +16,7 @@
     color: #000000;
     transition: 0.5s ease;
     font-size: 15px;
+    letter-spacing: 0;
   }
   .btn-yellow:hover {
     background-position: 210px 0;
@@ -43,6 +44,7 @@
     font-size: 15px;
     font-weight: 400;
     transition: 0.5s ease;
+    letter-spacing: 0;
   }
   .btn-dark:hover {
     background-position: 210px 0;
