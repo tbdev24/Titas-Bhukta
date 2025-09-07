@@ -40,21 +40,53 @@
         "product_i4WkXB": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "black-leather-bag",
             "quick_view_position": "top-right"
           }
         },
         "product_tAY4Ef": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "blue-silk-tuxedo",
+            "quick_view_position": "top-right"
+          }
+        },
+        "product_WKCQKj": {
+          "type": "product",
+          "settings": {
+            "product": "chequered-red-shirt",
+            "quick_view_position": "top-right"
+          }
+        },
+        "product_He3G4p": {
+          "type": "product",
+          "settings": {
+            "product": "classic-leather-jacket",
+            "quick_view_position": "top-right"
+          }
+        },
+        "product_bPiW34": {
+          "type": "product",
+          "settings": {
+            "product": "classic-varsity-top",
+            "quick_view_position": "top-right"
+          }
+        },
+        "product_LrQw4L": {
+          "type": "product",
+          "settings": {
+            "product": "dark-denim-top",
             "quick_view_position": "top-right"
           }
         }
       },
       "block_order": [
         "product_i4WkXB",
-        "product_tAY4Ef"
+        "product_tAY4Ef",
+        "product_WKCQKj",
+        "product_He3G4p",
+        "product_bPiW34",
+        "product_LrQw4L"
       ],
       "name": "Custom Collection Grid",
       "settings": {}
