@@ -103,3 +103,7 @@
     background: #f5f5f5;
     text-align: center;
   }
+  .collection-banner .banner-feature p {
+    margin: 0;
+    color: #000000;
+  }
