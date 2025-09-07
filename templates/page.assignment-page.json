@@ -55,7 +55,7 @@
           "type": "product",
           "settings": {
             "product": "chequered-red-shirt",
-            "quick_view_position": "top-right"
+            "quick_view_position": "top-center"
           }
         },
         "product_He3G4p": {
@@ -69,14 +69,14 @@
           "type": "product",
           "settings": {
             "product": "classic-varsity-top",
-            "quick_view_position": "top-right"
+            "quick_view_position": "top-center"
           }
         },
         "product_LrQw4L": {
           "type": "product",
           "settings": {
             "product": "dark-denim-top",
-            "quick_view_position": "top-right"
+            "quick_view_position": "center-right"
           }
         }
       },
