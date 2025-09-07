@@ -38,6 +38,7 @@
     align-items: center;
     margin-top: 20px;
     width: 100%;
+    margin-bottom: 10px;
 }
 .quick-view .row .col-5 {
     -ms-flex: 0 0 48%;
