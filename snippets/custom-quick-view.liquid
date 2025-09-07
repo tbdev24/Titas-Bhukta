@@ -330,7 +330,7 @@
                     }
 
                     //Add to Cart
-                    addToCartBtn.onclick = function() {
+                    {% comment %} addToCartBtn.onclick = function() {
                         let selectedColor = document.querySelector("input[name="color"]:checked")?.value;
                         let selectedSize = document.querySelector("input[name="size"]:checked")?.value;
 
@@ -352,7 +352,7 @@
                             alert("Added to Cart");
                             popup.classList.add("popup-hidden");
                         });
-                    };
+                    }; {% endcomment %}
                 });
             });
         });
