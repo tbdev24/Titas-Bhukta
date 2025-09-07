@@ -319,6 +319,9 @@
                 .then(res => res.json())
                 .then(product => {
                     // Fill content
+                    window.shopifyCurrencySymbol = "{{ 1 | money | slice: 0, 1 }}";
+                    console.log(window.shopifyCurrencySymbol); // outputs "$" or "€"
+
                     document.getElementById("quick-view-title").innerText = product.title;
                     document.getElementById("quick-view-price").innerText = (product.price / 100).toFixed(2) + ' ' + Shopify.currency.active;
                     document.getElementById("quick-view-desc").innerHTML = product.description;
