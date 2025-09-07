@@ -408,6 +408,7 @@
                                   radio.addEventListener("change", function () {
                                       if (radio.checked) {
                                           document.querySelector("#size-selector-header p").innerText = val;
+                                          document.querySelector("#size-selector-header p").style.width = "100%";
                                           document.getElementById("size-selector").classList.remove("active");
                                       }
                                   });
