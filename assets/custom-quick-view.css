@@ -60,6 +60,7 @@
 .quick-view .row .col-7 h3 {
     font-weight: 300;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 .quick-view .row .col-7 h4 {
     font-weight: 400;
