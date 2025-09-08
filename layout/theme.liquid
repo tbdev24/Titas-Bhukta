@@ -342,13 +342,6 @@
         });
       </script>
       <script>
-          function getPrefetchedProduct(handle) {
-              const script = document.getElementById(`product-json-${handle}`);
-              if (script) {
-                  return JSON.parse(script.textContent);
-              }
-              return null;
-          }
           (function () {
               const popup = document.getElementById("quick-view-popup");
               const closeBtn = document.getElementById("quick-view-close");
@@ -362,21 +355,10 @@
                       
                       const handle = this.dataset.productHandle;
 
-                      let product = getPrefetchedProduct(handle);
-
-                      if (product) {
-                          renderQuickView(product);
-                      } else {
-                          // fallback
-                          fetch(`/products/${handle}.js`)
-                          .then(res => res.json())
-                          .then(product => {
-                              renderQuickView(product);
-                          });
-                      }
-
                       //Fetch Content
-                      function renderQuickView(product) {
+                      fetch(`/products/${handle}.js`)
+                      .then(res => res.json())
+                      .then(product => {
                           // Fill content
                           window.shopifyCurrencySymbol = "{{ 1 | money | slice: 0, 1 }}";
                           document.getElementById("quick-view-title").innerText = product.title;
@@ -482,7 +464,7 @@
                                   window.location.href = "/cart";
                               });
                           };
-                      }
+                      });
                   });
               });
 
