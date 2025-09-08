@@ -362,14 +362,12 @@
                       
                       const handle = this.dataset.productHandle;
 
-                      // Try prefetched product first
                       let product = getPrefetchedProduct(handle);
 
                       if (product) {
-                          // already prefetched
                           renderQuickView(product);
                       } else {
-                          // fallback to fetch
+                          // fallback
                           fetch(`/products/${handle}.js`)
                           .then(res => res.json())
                           .then(product => {
