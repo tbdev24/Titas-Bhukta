@@ -161,6 +161,13 @@ left: calc(50% - 100px);
     margin-bottom: 25px;
   }
 
+  .collection-banner .banner-header.hamburger-open .hamburger-icon {
+    display: none;
+  }
+  .collection-banner .banner-header.hamburger-open .hamburger-cross-icon {
+    display: block;
+  }
+
   .collection-banner .banner-content {
     background-size: 750px;
     background-position: center 190px;
