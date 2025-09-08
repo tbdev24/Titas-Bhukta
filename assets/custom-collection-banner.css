@@ -129,6 +129,8 @@
 .collection-banner .banner-header .container {
     display: block;
     text-align: center;
+            padding: 0;
+        padding-bottom: 25px;
 }
 .collection-banner .banner-header .btn-yellow {
     width: 200px;
