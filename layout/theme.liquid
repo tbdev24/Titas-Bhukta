@@ -342,6 +342,13 @@
         });
       </script>
       <script>
+          function getPrefetchedProduct(handle) {
+              const script = document.getElementById(`product-json-${handle}`);
+              if (script) {
+                  return JSON.parse(script.textContent);
+              }
+              return null;
+          }
           (function () {
               const popup = document.getElementById("quick-view-popup");
               const closeBtn = document.getElementById("quick-view-close");
@@ -354,6 +361,21 @@
                       popup.classList.remove("popup-hidden");
                       
                       const handle = this.dataset.productHandle;
+
+                      // Try prefetched product first
+                      let product = getPrefetchedProduct(handle);
+
+                      if (product) {
+                          // already prefetched
+                          renderQuickView(product);
+                      } else {
+                          // fallback to fetch
+                          fetch(`/products/${handle}.js`)
+                          .then(res => res.json())
+                          .then(product => {
+                              renderQuickView(product);
+                          });
+                      }
 
                       //Fetch Content
                       fetch(`/products/${handle}.js`)
