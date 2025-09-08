@@ -331,6 +331,13 @@
     </ul>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".hamburger-icon").addEventListener("click", function {
+          document.querySelector(".banner-header").classList.add("hamburger-open");
+        });
+      });
+    </script>
+    <script>
         (function () {
             const popup = document.getElementById("quick-view-popup");
             const closeBtn = document.getElementById("quick-view-close");
