@@ -2,9 +2,11 @@
   <!-- Header -->
   <div class="banner-header">
     <div class="container">
-      {% if section.settings.logo %}
-        <img src="{{ section.settings.logo | image_url }}" alt="logo" class="logo" width="140" height="auto" />
-      {% endif %}
+      <div class="logo-container">  
+        {% if section.settings.logo %}
+          <img src="{{ section.settings.logo | image_url }}" alt="logo" class="logo" width="140" height="auto" />
+        {% endif %}
+      </div>
       <p>{{ section.settings.header_text }}</p>
       {% if section.settings.header_button_text != blank %}
         <a href="{{ section.settings.header_button_link }}" class="btn-yellow">
