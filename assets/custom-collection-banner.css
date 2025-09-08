@@ -143,7 +143,9 @@
       position: relative;
 left: calc(50% - 100px);
 }
-
+.collection-banner .hamburger-icon {
+    display: block;
+  }
 
   .collection-banner .banner-content {
     background-size: 750px;
