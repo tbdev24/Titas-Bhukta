@@ -348,6 +348,18 @@
               const addToCartBtn = document.getElementById("quick-view-add-to-cart")
               const sizeSelectorHeader = document.getElementById("size-selector-header");
 
+              const productCache = {};
+
+              document.querySelectorAll(".quick-view-trigger").forEach(btn => {
+                  const handle = btn.dataset.productHandle;
+                  fetch(`/products/${handle}.js`)
+                      .then(res => res.json())
+                      .then(product => {
+                          productCache[handle] = product;
+                      })
+                      .catch(err => console.error("Prefetch error:", err));
+              });
+
               //Open
               document.querySelectorAll(".quick-view-trigger").forEach((btn) => {
                   btn.addEventListener("click", function () {
