@@ -145,6 +145,9 @@ left: calc(50% - 100px);
 }
 .collection-banner .hamburger-icon {
     display: block;
+        position: absolute;
+    width: 25px;
+    left: 15px;
   }
 
   .collection-banner .banner-content {
