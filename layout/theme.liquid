@@ -376,9 +376,7 @@
                       }
 
                       //Fetch Content
-                      fetch(`/products/${handle}.js`)
-                      .then(res => res.json())
-                      .then(product => {
+                      function renderQuickView(product) {
                           // Fill content
                           window.shopifyCurrencySymbol = "{{ 1 | money | slice: 0, 1 }}";
                           document.getElementById("quick-view-title").innerText = product.title;
