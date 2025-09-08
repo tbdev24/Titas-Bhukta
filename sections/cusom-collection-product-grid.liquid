@@ -11,10 +11,6 @@
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="featured-image" width="375px" height="395px">
               <div class="quick-view-trigger" data-product-handle="{{ product.handle }}"><img src="{{ '/plus-icon.svg' | file_url }}" alt="open" width="18px" height="18px"></div>
           </div>
-          <!-- Prefetch JSON -->
-          <script type="application/json" id="product-json-{{ product.handle }}">
-            {{ product | json }}
-          </script>
         {% endif %}
       {% endfor %}
     </div>
