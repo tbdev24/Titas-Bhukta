@@ -129,6 +129,9 @@
 .collection-banner .banner-header .container {
     display: block;
 }
+.collection-banner .banner-header .btn-yellow {
+    width: 200px;
+}
 
 
   .collection-banner .banner-content {
