@@ -156,9 +156,9 @@ left: calc(50% - 100px);
   .collection-banner .hamburger-cross-icon {
     display: none;
         position: absolute;
-    width: 25px;
-    top: 16px;
-    left: 15px;
+           width: 20px;
+        top: 16px;
+        left: 17px;
   }
   .collection-banner .banner-header p {
     display: none;
