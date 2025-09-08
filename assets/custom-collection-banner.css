@@ -151,6 +151,7 @@ left: calc(50% - 100px);
     display: block;
         position: absolute;
     width: 25px;
+    top: 16px;
     left: 15px;
   }
 
