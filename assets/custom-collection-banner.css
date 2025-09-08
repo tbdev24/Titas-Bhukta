@@ -125,4 +125,8 @@
     .container {
     padding: 0 15px;
   }
+  .collection-banner .banner-content .container {
+    min-height: 1px;
+    padding-bottom: 200px;
+}
 }
