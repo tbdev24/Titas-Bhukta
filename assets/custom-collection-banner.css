@@ -134,7 +134,7 @@
   .collection-banner .banner-content .container {
     min-height: 1px;
     padding: 0;
-    padding-bottom: 10px !important;
+    padding-bottom: 10px;
 }
 .collection-banner .banner-content .wrapper {
     background: transparent;
