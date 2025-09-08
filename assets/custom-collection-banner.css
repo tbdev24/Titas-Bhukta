@@ -167,6 +167,12 @@ left: calc(50% - 100px);
   .collection-banner .banner-header.hamburger-open .hamburger-cross-icon {
     display: block;
   }
+  .collection-banner .banner-header.hamburger-open p {
+    display: block;
+  }
+  .collection-banner .banner-header.hamburger-open .btn-yellow {
+    display: block;
+  }
 
   .collection-banner .banner-content {
     background-size: 750px;
