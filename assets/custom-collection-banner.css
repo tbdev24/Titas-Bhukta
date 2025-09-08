@@ -71,6 +71,12 @@
     justify-content: space-between;
     align-items: center;
   }
+  .collection-banner .hamburger-icon {
+    display: none;
+  }
+  .collection-banner .hamburger-cross-icon {
+    display: none;
+  }
   .collection-banner .banner-header .logo {
     width: 150px;
   }
