@@ -21,6 +21,7 @@
     max-width: 100%;
     background: #fff;
     padding: 15px;
+    padding-top: 12px;
 }
 .quick-view #quick-view-close {
     float: right;
