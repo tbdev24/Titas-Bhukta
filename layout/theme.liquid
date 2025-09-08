@@ -301,7 +301,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lustria&display=swap" rel="stylesheet" />
 
-    {% if template == 'page.assignment-page' %}
+    {% if template == 'page.assignment-page' or template == 'index' %}
       <link rel="stylesheet" href="{{ 'custom-collection-banner.css' | asset_url }}" type="text/css" />
       <link rel="stylesheet" href="{{ 'custom-collection-product-grid.css' | asset_url }}" type="text/css" />
       <link rel="stylesheet" href="{{ 'custom-quick-view.css' | asset_url }}" type="text/css" />
