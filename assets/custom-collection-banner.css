@@ -145,6 +145,7 @@
     margin-bottom: 20px;
 }
 .collection-banner .btn-dark {
+  position: relative;
 left: calc(50% - 96px);
 }
 }
