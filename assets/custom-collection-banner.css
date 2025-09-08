@@ -127,12 +127,15 @@
   }
   .collection-banner .banner-content {
     background-size: 645px;
-    background-position: center 370px;
+    background-position: center 288px;
     background-repeat: no-repeat;
 }
   .collection-banner .banner-content .container {
     min-height: 1px;
     padding: 0;
     padding-bottom: 178px;
+}
+.collection-banner .banner-content .wrapper {
+    background: transparent;
 }
 }
