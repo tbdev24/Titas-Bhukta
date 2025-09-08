@@ -127,6 +127,7 @@
   }
   .collection-banner .banner-content .container {
     min-height: 1px;
+    padding: 0;
     padding-bottom: 200px;
 }
 }
