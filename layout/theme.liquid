@@ -367,10 +367,14 @@
                       
                       const handle = this.dataset.productHandle;
 
-                      //Fetch Content
-                      fetch(`/products/${handle}.js`)
-                      .then(res => res.json())
-                      .then(product => {
+                      const product = productCache[handle];
+
+                      if (!product) {
+                          alert("Product data not loaded yet. Please try again.");
+                          return;
+                      }
+                      
+                      
                           // Fill content
                           window.shopifyCurrencySymbol = "{{ 1 | money | slice: 0, 1 }}";
                           document.getElementById("quick-view-title").innerText = product.title;
@@ -476,7 +480,7 @@
                                   window.location.href = "/cart";
                               });
                           };
-                      });
+                    
                   });
               });
 
