@@ -143,6 +143,10 @@
       position: relative;
 left: calc(50% - 100px);
 }
+.collection-banner .logo-container {
+  padding: 22px 15px 14px;
+    box-shadow: 0 2px 5px #ccc;
+}
 .collection-banner .hamburger-icon {
     display: block;
         position: absolute;
