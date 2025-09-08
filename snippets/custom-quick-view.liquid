@@ -1,0 +1,37 @@
+<div id="quick-view-popup" class="quick-view popup-hidden">
+    <div class="quick-view-content">
+        <button id="quick-view-close"><img src="{{ '/cross-icon.svg' | file_url }}" alt="close" width="18px" height="18px"></button>
+
+        <div class="row">
+            <div class="col-5">
+                <img src="{{ '/dummy-image.jpg' | file_url }}" alt="image" id="quick-view-image" width="121px" height="150px" />
+            </div>
+            <div class="col-7">
+                <h3 id="quick-view-title"></h3>
+                <h4 id="quick-view-price"></h4>
+                <p id="quick-view-desc"></p>
+            </div>
+        </div>
+        <div class="colors-container">
+            <h4>Color</h4>
+            <div class="color-options">
+                <div id="color-options-fill"></div>
+            </div>
+        </div>
+        <div class="sizes-container">
+            <h4>Size</h4>
+            <div id="size-selector">
+                <div id="size-selector-header">
+                    <p>Choose your size</p>
+                    <img src="{{ '/down-arrow.svg' | file_url }}" alt="arrow" width="37px" height="34px">
+                </div>
+
+                <div class="size-options">
+                    <div id="size-options-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="quick-view-add-to-cart">Add To Cart <img src="{{ '/right-icon.svg' | file_url }}" alt="arrow" width="20px" height="9px"></button>
+    </div>
+</div>

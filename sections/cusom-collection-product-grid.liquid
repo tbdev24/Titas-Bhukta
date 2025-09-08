@@ -1,0 +1,57 @@
+<div class="collection-product-grid">
+  <div class="container">
+    <h2>Tisso vison in the wild</h2>
+    <div class="row">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="col-4 {{ block.settings.quick_view_position }}">
+              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="featured-image" width="375px" height="395px">
+              <div class="quick-view-trigger" data-product-handle="{{ product.handle }}"><img src="{{ '/plus-icon.svg' | file_url }}" alt="open" width="18px" height="18px"></div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% render 'custom-quick-view' %}
+
+{% schema %}
+{
+  "name": "Custom Collection Grid",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose product"
+        },
+        {
+          "type": "select",
+          "id": "quick_view_position",
+          "label": "Quick View Toggler Position",
+          "default": "top-right",
+          "options": [
+            { "value": "top-center", "label": "Top Center" },
+            { "value": "top-right", "label": "Top Right" },
+            { "value": "top-right-edge", "label": "Top Right Edge" },
+            { "value": "center-center", "label": "Center Center" },
+            { "value": "center-right", "label": "Center Right" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Grid",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}

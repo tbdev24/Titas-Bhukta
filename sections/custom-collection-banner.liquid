@@ -1,0 +1,127 @@
+<div class="collection-banner">
+  <!-- Header -->
+  <div class="banner-header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="{{ '/hamburger.svg' | file_url }}" alt="arrow" class="hamburger-icon" width="37px" height="34px">
+        <img src="{{ '/hamburger-cross.svg' | file_url }}" alt="arrow" class="hamburger-cross-icon" width="37px" height="34px">
+        {% if section.settings.logo %}
+          <img src="{{ section.settings.logo | image_url }}" alt="logo" class="logo" width="140" height="auto" />
+        {% endif %}
+      </div>
+      <p>{{ section.settings.header_text }}</p>
+      {% if section.settings.header_button_text != blank %}
+        <a href="{{ section.settings.header_button_link }}" class="btn-yellow">
+          {{ section.settings.header_button_text }}
+          {% if section.settings.header_button_icon %}
+            <img src="{{ section.settings.header_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
+          {% endif %}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Banner Content -->
+  <div class="banner-content" style="background-image: url('{{ section.settings.banner_background | image_url }}');">
+    <div class="container">
+      <div class="wrapper">
+        <h1>{{ section.settings.banner_heading }}</h1>
+        <p>{{ section.settings.banner_text }}</p>
+        {% if section.settings.banner_button_text != blank %}
+          <a href="{{ section.settings.banner_button_link }}" class="btn-dark">
+            {{ section.settings.banner_button_text }}
+            {% if section.settings.banner_button_icon %}
+              <img src="{{ section.settings.banner_button_icon | image_url }}" alt="arrow" width="25" height="auto" />
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature -->
+  <div class="banner-feature">
+    <div class="container">
+      <p>{{ section.settings.feature_text }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Collection Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "header_button_text",
+      "label": "Header Button Text",
+      "default": "Choose Gift"
+    },
+    {
+      "type": "url",
+      "id": "header_button_link",
+      "label": "Header Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_button_icon",
+      "label": "Header Button Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_background",
+      "label": "Banner Background Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Banner Heading",
+      "default": "The Gift Guide"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_text",
+      "label": "Banner Description",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "text",
+      "id": "banner_button_text",
+      "label": "Banner Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "banner_button_link",
+      "label": "Banner Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_button_icon",
+      "label": "Banner Button Icon"
+    },
+    {
+      "type": "text",
+      "id": "feature_text",
+      "label": "Feature Text",
+      "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Collection Banner"
+    }
+  ]
+}
+{% endschema %}

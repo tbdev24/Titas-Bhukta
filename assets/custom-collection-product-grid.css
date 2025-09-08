@@ -1,0 +1,90 @@
+/*Collection Product Grid*/
+.collection-product-grid {
+    padding: 40px 0;
+}
+.collection-product-grid h2 {
+    margin-bottom: 25px;
+    font-family: "Lustria" !important;
+    font-weight: 300;
+}
+.collection-product-grid .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.collection-product-grid .row .col-4 {
+    -ms-flex: 0 0 calc(33.333333% - 15px);
+    flex: 0 0 calc(33.333333% - 15px);
+    max-width: calc(33.333333% - 15px);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.collection-product-grid .row .col-4 img.featured-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center; 
+}
+.collection-product-grid .row .col-4 .quick-view-trigger img {
+    background: #F8F8F8E5;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    top: 0;
+    border-radius: 50%;
+    padding: 7px 0;
+    width: 25px;
+    height: 25px;
+}
+
+/*Toggler Positions*/
+.collection-product-grid .row .col-4.top-center .quick-view-trigger img {
+    top: 95px;
+    left: calc(50% + 5px);
+}
+.collection-product-grid .row .col-4.top-right .quick-view-trigger img {
+    top: 65px;
+    left: calc(50% + 30px);
+}
+.collection-product-grid .row .col-4.top-right-edge .quick-view-trigger img {
+    top: 65px;
+    left: calc(50% + 75px);
+}
+.collection-product-grid .row .col-4.center-center .quick-view-trigger img {
+    top: calc(50% + 20px);
+    left: calc(50% + 20px);
+}
+.collection-product-grid .row .col-4.center-right .quick-view-trigger img {
+    top: calc(50% - 8px);
+    right: 50px;
+}
+
+@media (max-width: 768px) {
+ .collection-product-grid h2 {
+        margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+    .collection-product-grid .row .col-4 {
+        -ms-flex: 0 0 calc(50% - 4px);
+    flex: 0 0 calc(50% - 4px);
+    max-width: calc(50% - 4px);
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: -4px;
+    }
+    .collection-product-grid .row .col-4 img.featured-image {
+    height: 200px;
+}
+.collection-product-grid .row .col-4 .quick-view-trigger img {
+    padding: 5px 0px;
+    width: 20px;
+    height: 20px;
+}
+.collection-product-grid .row .col-4 .quick-view-trigger img {
+    top: 20px !important;
+    left: calc(50% + 20px) !important;
+}
+}
