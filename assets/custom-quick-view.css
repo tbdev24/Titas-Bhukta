@@ -121,6 +121,7 @@
     margin-top: 50px;
     margin-bottom: 2px;
     cursor: pointer;
+    font-family: "Jost" !important;
 }
 .quick-view #quick-view-add-to-cart img {
     width: 20px;
